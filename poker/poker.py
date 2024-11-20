@@ -129,14 +129,16 @@ def print_cards(cards):
         output += str(card) + '  '
     print(output)
 
-if __name__ == '__main__':
+def main():
     deck = create_deck()
     results = {i : 0 for i in range(1, 11)}
-    tries = 1_000_000
+    tries = input('How many tries? ')
     for i in range(tries):
         cards = get_5_cards(deck)
         results[calculate_score(cards)] += 1
     
     for key, value in results.items():
         print(f'{key}: {round(value/tries*100, 6)} %')
-    
+
+if __name__ == '__main__':
+    main()
