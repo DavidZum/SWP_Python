@@ -28,5 +28,7 @@ class TestPoker(unittest.TestCase):
     def test_is_same_color(self):
         self.assertTrue(is_same_color(self.flush))
         self.assertFalse(is_same_color(self.straight))
+        
+        
 if __name__ == '__main__':
     unittest.main()
