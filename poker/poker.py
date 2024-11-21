@@ -132,7 +132,7 @@ def print_cards(cards):
 def main():
     deck = create_deck()
     results = {i : 0 for i in range(1, 11)}
-    tries = input('How many tries? ')
+    tries = int(input('How many tries? '))
     for i in range(tries):
         cards = get_5_cards(deck)
         results[calculate_score(cards)] += 1
